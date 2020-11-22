@@ -35,7 +35,7 @@ export default {
     };
   },
   async created() {
-    const { data } = await this.$axios.get('http://localhost:3030/sentiments/?limit=35&random=true')
+    const { data } = await this.$axios.get('https://api.projetoemotions.com/sentiments/?limit=35&random=true')
     console.log(data)
     this.people =  data.people;
   },
@@ -43,7 +43,7 @@ export default {
     async sendPicture() {
       try {
         const req = await this.$axios.$post(
-          "http://localhost:3030/sentiments/binary",
+          "https://api.projetoemotions.com/sentiments/binary",
           {
             ImageBinary: this.img,
             Tag: "webcam",

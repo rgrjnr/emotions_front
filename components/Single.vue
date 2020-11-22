@@ -21,7 +21,7 @@
 export default {
   async asyncData({ params, $axios }) {
     try {
-      const person = await $axios.get(`http://localhost:3030/sentiments/${this.id}`);
+      const person = await $axios.get(`https://api.projetoemotions.com/sentiments/${this.id}`);
       console.log(person.data);
       return { person: person.data };
     } catch (err) {
