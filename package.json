@@ -1,0 +1,36 @@
+{
+  "name": "e-motions",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "npm run lint:js"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.12.2",
+    "core-js": "^3.6.5",
+    "easy-scroll": "^0.7.0",
+    "intersection-observer": "^0.11.0",
+    "jquery": "^3.5.1",
+    "nuxt": "^2.14.5",
+    "vue-intersect": "^1.1.6",
+    "vue-observe-visibility": "^0.4.6",
+    "vue-scrollama": "^1.1.9",
+    "vue-scrollto": "^2.20.0",
+    "vue-web-cam": "^1.9.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.8.1",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "fibers": "^5.0.0",
+    "sass": "^1.28.0",
+    "sass-loader": "^10.0.4"
+  }
+}
