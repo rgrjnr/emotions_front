@@ -379,7 +379,7 @@ export default {
     async sendPicture() {
       try {
         const req = await this.$axios.$post(
-          "https://api.projetoemotions.com/sentiments/binary",
+          "/sentiments/binary",
           {
             ImageBinary: this.img,
             Tag: "webcam",

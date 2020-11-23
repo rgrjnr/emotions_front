@@ -180,10 +180,11 @@ html {
   bottom: 0rem;
   width: 3rem;
   color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .menu-inside__link {
-  font-weight: bold;
   text-decoration: none;
   color: var(--text-color);
 }

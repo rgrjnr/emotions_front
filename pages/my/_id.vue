@@ -98,7 +98,7 @@ export default {
   async asyncData({ params, $axios }) {
     try {
       const person = await $axios.get(
-        `https://api.projetoemotions.com/sentiments/${params.id}`
+        `/sentiments/${params.id}`
       );
       console.log(person.data);
       return { person: person.data };

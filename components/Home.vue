@@ -13,8 +13,10 @@
 h1 {
   text-transform: uppercase;
   font-weight: lighter;
-  font-size: 3vw;
+  font-size: 4vw;
   margin-left: 10vw;
+  margin-top: -3vw;
+  line-height: 1.2;
 }
 
 .home {

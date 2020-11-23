@@ -1,6 +1,6 @@
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
-  ssr: false,
+  mode: 'spa',
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -53,7 +53,10 @@ export default {
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  
+  axios: {
+    baseURL: 'https://projetoemotions.com', // Used as fallback if no runtime config is provided
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {}
