@@ -1724,7 +1724,7 @@
       </div>
       <div></div>
       <div class="column-center" v-observe-visibility="forceDark">
-        <img src="/insights.png" style="max-height: 60vh" alt="" />
+        <img src="/insights.jpg" style="max-height: 70vh" alt="" />
       </div>
     </div>
   </div>

@@ -12,6 +12,9 @@
       overflow: hidden;
     "
   >
+
+
+  <nuxt-link to="/" style="position: fixed; top: 2rem; right: 2rem;"><img src="/close.svg" alt="Fechar" style="filter: brightness(100); width: 3rem; "></nuxt-link>
   
 <input type="text" :value="`https://projetoemotions.com/my/${person._id}`" id="myInput" style="opacity: 0; width: 0">
     <div class="white" style="margin-right: 10rem">
