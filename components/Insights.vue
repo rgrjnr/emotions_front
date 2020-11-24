@@ -23,10 +23,8 @@
     </div>
     <div class="column-1 column-small">
       <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero nulla
-        possimus tenetur saepe ullam. Deserunt accusantium eveniet dolores.
-        Dolore delectus quis tenetur. Praesentium officiis quam officia
-        consectetur cumque nisi fuga?
+        As formas representam a proporção dos sentimentos capturados nos lugares
+        de estudo. A emoção “Calmo” maior evidência, e o “Surpreso” com menor.
       </p>
     </div>
     <div>
@@ -36,10 +34,13 @@
     <div class="dark dark-bg">
       <div class="column-1 column-small">
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero nulla
-          possimus tenetur saepe ullam. Deserunt accusantium eveniet dolores.
-          Dolore delectus quis tenetur. Praesentium officiis quam officia
-          consectetur cumque nisi fuga?
+          O gráfico ao lado mostra a relação entre os sentimentos nos nossos
+          estudos. O sentimento mais frequente é o de Calma. Os desdobramentos
+          nos galhos do diagrama evoluem as relações entre os sentimentos.
+        </p>
+        <p>
+          Quanto mais próximos no diagrama, mais relacionados estão os
+          sentimentos.
         </p>
       </div>
       <div></div>
@@ -52,10 +53,12 @@
     <div class="column-1 column-center">
       <div>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam saepe
-          quas dolor nihil excepturi cupiditate labore quo obcaecati cum placeat
-          blanditiis assumenda expedita, repudiandae tempora qui provident
-          perspiciatis quibusdam distinctio.
+          Entenda como os sentimentos se espalham ao redor das regiões
+          analisadas e como essas regiões se comparam umas às outras.
+        </p>
+        <p>
+          Clique nas regiões marcadas para ver o detalhamento de cada lugar
+          analisado.
         </p>
         <table class="table-emotions">
           <tr
@@ -1701,14 +1704,22 @@
           </g>
         </g>
       </svg>
-    </div> <div class="column-1 column-small"></div>
-        <div class="dark dark-bg">
-      <div class="column-1 column-small">
+    </div>
+    <div class="column-1 column-small"></div>
+    <div class="dark dark-bg">
+      <div class="column-1">
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero nulla
-          possimus tenetur saepe ullam. Deserunt accusantium eveniet dolores.
-          Dolore delectus quis tenetur. Praesentium officiis quam officia
-          consectetur cumque nisi fuga?
+          Os levantamentos, além de dar luz às discussões de lugaridade e
+          impacto psicossocial, levantam algumas outras questões em relação à
+          privacidade e tecnologia, discussões que são posteriores à execução
+          desse projeto e foram discutidas neste artigo.
+        </p>
+        <p>
+          Além do contexto do Design Digital, os dados podem ser usados como
+          ferramenta estratégica na gestão da cidade. A aplicação pode ser dada
+          na melhoria da qualidade dos lugares, em práticas de marketing no
+          comportamento de marcas, termômetro sensorial de possíveis ações
+          promovidas de cunho independente e como estudo etimológico no espaço.
         </p>
       </div>
       <div></div>

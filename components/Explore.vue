@@ -1,56 +1,54 @@
 <template>
-<div class="page-container">
-    <div class="column-1 column-small">
+  <div class="page-container">
+    <div class="column-1 column-small pad-top">
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid atque
-        animi ab fuga veritatis a iusto magnam aspernatur! Dignissimos minus
-        consectetur error voluptatem veniam, eius atque hic eum officia
-        veritatis?
+        Veja você e outras pessoas têm se sentido. As formas retratam a
+        continuidade das informações processadas. Clique nas formas para ver o
+        detalhamento de cada emoção.
       </p>
+    </div>
+    <div class="column-3">
+      <div
+        class="container"
+        style="
+          display: grid;
+          grid-template-columns: auto auto auto auto auto auto auto;
+          max-width: 100vw;
+          max-height: 60vh;
+          flex-wrap: wrap;
+        "
+      >
+        <nuxt-link
+          :to="`/my/${person._id}`"
+          v-for="person in people"
+          v-bind:key="person._id"
+        >
+          <blob :Person="person" size="150px" />
+        </nuxt-link>
+      </div>
+    </div>
   </div>
-  <div class="column-3">
-
-  <div
-    class="container"
-    style="
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto; max-width: 100vw; max-height:60vh; flex-wrap: wrap"
-  >
-    <nuxt-link
-      :to="`/my/${person._id}`"
-      v-for="person in people"
-      v-bind:key="person._id"
-    >
-      <blob :Person="person" size="150px" />
-    </nuxt-link>
-  </div>
-  </div>
-
-</div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      people: null
+      people: null,
     };
   },
   async created() {
-    const { data } = await this.$axios.get('/sentiments/?limit=35&random=true')
-    console.log(data)
-    this.people =  data.people;
+    const { data } = await this.$axios.get("/sentiments/?limit=35&random=true");
+    console.log(data);
+    this.people = data.people;
   },
   methods: {
     async sendPicture() {
       try {
-        const req = await this.$axios.$post(
-          "/binary",
-          {
-            ImageBinary: this.img,
-            Tag: "webcam",
-          }
-        );
+        const req = await this.$axios.$post("/binary", {
+          ImageBinary: this.img,
+          Tag: "webcam",
+        });
         this.person = req.FaceDetails[0];
       } catch (error) {
         console.log(error);

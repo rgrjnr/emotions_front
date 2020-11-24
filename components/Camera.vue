@@ -1,11 +1,9 @@
 <template>
   <div class="page-container">
-    <div class="column-1 column-small">
+    <div class="column-1 column-small pad-top">
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid atque
-        animi ab fuga veritatis a iusto magnam aspernatur! Dignissimos minus
-        consectetur error voluptatem veniam, eius atque hic eum officia
-        veritatis?
+        Descubra a cor que sua emoção representa. Basta clicar no botão para
+        tirar uma selfie e o resultado aparecerá logo em seguida.
       </p>
     </div>
     <div class="column-3" :class="{ loading: loading }">
@@ -382,10 +380,9 @@ export default {
       if (!this.loading) {
         this.loading = true;
         try {
-          
           var lat = 0;
           var long = 0;
-          
+
           if (navigator.geolocation) {
             await navigator.geolocation.getCurrentPosition((position) => {
               lat = position.coords.latitude;
@@ -393,7 +390,7 @@ export default {
               console.log(lat, long);
             });
           }
-          
+
           this.Lat = lat;
           this.Long = long;
 

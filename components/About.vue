@@ -5,24 +5,15 @@
     </div>
     <div class="column-1 pad-top">
       <h3>
-        E-motions é um trabalho de conclusão de curso no qual discute a tríade
-        design, arte e tecnologia.
+        E-motions é um trabalho de conclusão de curso no qual discute a tríade design, arte e tecnologia.
       </h3>
 
       <p>
-        A partir de levantamento de dados etimológicos, sendo o recorte
-        geográfico a cidade de São Paulo. Com processamento de imagens urbanas e
-        de seus cidadãos, é proposto a reflexão sobre lugaridade e pertencimento
-        social e como as emoções estabelecem sua relação direta como interagimos
-        com o urbano, com o outro e consigo mesmo - como indivíduo.
+        A partir de levantamento de dados etimológicos, sendo o recorte geográfico a cidade de São Paulo. Com processamento de imagens urbanas e de seus cidadãos, é proposto a reflexão sobre lugaridade e pertencimento social e como as emoções estabelecem sua relação direta como interagimos com o urbano, com o outro e consigo mesmo - como indivíduo.
       </p>
 
       <p>
-        A proposta do questionamento levantado é mostrar como fazer parte de uma
-        ambiência além da física, unindo o cibernético, o digital e o emocional.
-        Tomando partida da teoria das cores, intervir de forma digital, por meio
-        de data arte na cidade, além do levantamento de dados para uso de mapa
-        de temperatura para estudos de cunho social.
+        A proposta do questionamento levantado é mostrar como fazer parte de uma ambiência além da física, unindo o cibernético, o digital e o emocional. Tomando partida da teoria das cores, intervir de forma digital, por meio de data arte na cidade, além do levantamento de dados para uso de mapa de temperatura para estudos de cunho social.
       </p>
     </div>
     <div class="margin-left column-1">
@@ -85,25 +76,16 @@
     </div>
     <div class="column-1 pad-top">
       <h3>
-        E-motions é um trabalho de conclusão de curso no qual discute a tríade
-        design, arte e tecnologia.
+        E-motions une tecnologias de reconhecimento facil e códigos procedurais proprietários para criação de visualizações de dados únicas
       </h3>
 
       <p>
-        A partir de levantamento de dados etimológicos, sendo o recorte
-        geográfico a cidade de São Paulo. Com processamento de imagens urbanas e
-        de seus cidadãos, é proposto a reflexão sobre lugaridade e pertencimento
-        social e como as emoções estabelecem sua relação direta como interagimos
-        com o urbano, com o outro e consigo mesmo - como indivíduo.
+        Coleta de imagens
       </p>
-
-      <p>
-        A proposta do questionamento levantado é mostrar como fazer parte de uma
-        ambiência além da física, unindo o cibernético, o digital e o emocional.
-        Tomando partida da teoria das cores, intervir de forma digital, por meio
-        de data arte na cidade, além do levantamento de dados para uso de mapa
-        de temperatura para estudos de cunho social.
-      </p>
+      <p>Processamento das imagens a partir do Amazon Rekognition</p>
+      <p>Interpretação dos dados em script desenvolvido pelo grupo</p>
+      <p>Representação artística dos dados através dos códigos</p>
+      <p>Alimentação de dados em banco</p>
     </div>
     <div class="column-1"></div>
   </div>

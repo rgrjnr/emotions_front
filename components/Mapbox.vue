@@ -1,11 +1,10 @@
 <template>
   <div class="page-container">
-    <div class="column-1 column-small">
+    <div class="column-1 column-small pad-top">
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid atque
-        animi ab fuga veritatis a iusto magnam aspernatur! Dignissimos minus
-        consectetur error voluptatem veniam, eius atque hic eum officia
-        veritatis?
+       
+Interaja com o mapa nas regiões de estudo da cidade de São Paulo, com a identificação da emoção por indivíduo no espaço.
+
       </p>
     </div>
     <div class="column-3">

@@ -13,7 +13,7 @@
     "
   >
   
-<input type="text" :value="`http://projetoemotions.com/my/${person._id}`" id="myInput" style="opacity: 0; width: 0">
+<input type="text" :value="`https://projetoemotions.com/my/${person._id}`" id="myInput" style="opacity: 0; width: 0">
     <div class="white" style="margin-right: 10rem">
       <Blob :Person="person" />
     </div>
