@@ -43,7 +43,11 @@
         e se comportar ao mundo que nos rodeia.
       </p>
 
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180.15 187.09">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 180.15 187.09"
+        style="max-width: 35vh"
+      >
         <g id="Layer_2" data-name="Layer 2">
           <g id="Camada_1" data-name="Camada 1">
             <path
@@ -73,8 +77,8 @@
         tempo e da relação com os objetos que cada cultura têm. O mesmo que
         ocorre com as expressões faciais.
       </p>
-      
-      <img src="/emocoes.png" style="width: 150%; height: auto;" alt="" />
+
+      <img src="/emocoes.png" style="width: 150%; height: auto" alt="" />
     </div>
     <div class="margin-left column-1">
       <h2>Nossa tecnologia</h2>
@@ -113,9 +117,8 @@
 }
 
 .cls-3 {
-  
-    stroke: var(--text-color);
-    fill: transparent;
+  stroke: var(--text-color);
+  fill: transparent;
 }
 
 @keyframes appear {

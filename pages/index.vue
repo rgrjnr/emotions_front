@@ -99,7 +99,7 @@ export default {
           index: 6,
           name: "Entenda",
           component: "Insights",
-          dark: true
+          dark: false
         },
       ],
     };
@@ -182,6 +182,11 @@ html {
   color: var(--text-color);
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.menu-page {
+  margin-bottom: 4rem;
 }
 
 .menu-inside__link {

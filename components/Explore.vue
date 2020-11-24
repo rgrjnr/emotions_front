@@ -1,10 +1,12 @@
 <template>
 <div class="page-container">
-  <div class="column-1">
-    <h2>Explorar</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quasi consequuntur nostrum cumque, fuga molestias illo quis dolorum molestiae sit. Debitis magni excepturi laboriosam enim, quis veniam nesciunt maiores quae.
-    </p>
+    <div class="column-1 column-small">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid atque
+        animi ab fuga veritatis a iusto magnam aspernatur! Dignissimos minus
+        consectetur error voluptatem veniam, eius atque hic eum officia
+        veritatis?
+      </p>
   </div>
   <div class="column-3">
 

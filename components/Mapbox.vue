@@ -1,12 +1,11 @@
 <template>
   <div class="page-container">
-    <div class="column-2">
-      <h2>Como os sentimentos se espalham pela cidade</h2>
+    <div class="column-1 column-small">
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem nesciunt
-        et pariatur. Nulla ducimus magni assumenda atque, excepturi dolores
-        distinctio necessitatibus ab. Provident esse, inventore sequi expedita
-        nemo consequatur adipisci!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid atque
+        animi ab fuga veritatis a iusto magnam aspernatur! Dignissimos minus
+        consectetur error voluptatem veniam, eius atque hic eum officia
+        veritatis?
       </p>
     </div>
     <div class="column-3">

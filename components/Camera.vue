@@ -1,7 +1,6 @@
 <template>
   <div class="page-container">
-    <div class="column-1">
-      <h2>Current Camera</h2>
+    <div class="column-1 column-small">
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid atque
         animi ab fuga veritatis a iusto magnam aspernatur! Dignissimos minus
@@ -9,8 +8,8 @@
         veritatis?
       </p>
     </div>
-    <div class="column-3">
-      <div class="camera-container">
+    <div class="column-3" :class="{ loading: loading }">
+      <div :class="{ 'camera-container': true }">
         <div class="camera-view" v-show="!captured">
           <vue-web-cam
             ref="webcam"
@@ -82,10 +81,13 @@ export default {
   },
   data() {
     return {
+      loading: false,
       img: null,
       camera: null,
       deviceId: null,
       devices: [],
+      Lat: 0,
+      Long: 0,
       captured: false,
       person: {
         BoundingBox: {
@@ -377,26 +379,62 @@ export default {
       console.log("On Camera Change Event", deviceId);
     },
     async sendPicture() {
-      try {
-        const req = await this.$axios.$post(
-          "/sentiments/binary",
-          {
+      if (!this.loading) {
+        this.loading = true;
+        try {
+          
+          var lat = 0;
+          var long = 0;
+          
+          if (navigator.geolocation) {
+            await navigator.geolocation.getCurrentPosition((position) => {
+              lat = position.coords.latitude;
+              long = position.coords.longitude;
+              console.log(lat, long);
+            });
+          }
+          
+          this.Lat = lat;
+          this.Long = long;
+
+          const req = await this.$axios.$post("/sentiments/binary", {
             ImageBinary: this.img,
             Tag: "webcam",
-          }
-        );
-        this.$router.push({
-    path: '/my/' + req.FaceDetails[0]._id
-}) ;
-      } catch (error) {
-        console.log(error);
+            Lat: this.Lat,
+            Long: this.Long,
+          });
+
+          console.log(req);
+          this.$router.push({
+            path: "/my/" + req._id,
+          });
+        } catch (error) {
+          console.log(error);
+          alert("Algo deu errado, tente novamente!");
+        }
       }
+
+      this.loading = false;
     },
   },
 };
 </script>
 
 <style lang="scss">
+.loading {
+  opacity: 0.3;
+  animation: loading infinite alternate-reverse 0.5s ease-in-out;
+}
+
+@keyframes loading {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+
 .container {
   margin: 0 auto;
   display: flex;

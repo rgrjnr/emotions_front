@@ -7,10 +7,11 @@
         viewBox="0 0 480 480"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
-        :style='`filter: blur(${ parseInt( size.replace( /^\D+/g, "") ) * 16 / 480 }px)`'
+        :style="`filter: blur(${
+          (parseInt(size.replace(/^\D+/g, '')) * 16) / 480
+        }px)`"
         class="blob-emotions"
       >
-
         <g>
           <path :fill="fillA" :d="pathA"></path>
           <path :fill="fillB" :d="pathB"></path>
@@ -24,15 +25,21 @@
         xmlns:xlink="http://www.w3.org/1999/xlink"
         class="blob-age"
       >
-        <g 
-        :style='`transform: rotate(${Math.random()*360}deg); transform-origin: 50% 50%;`'>
-          <path
-            :d="pathAge"
-            fill="transparent"
-            class="line-age"
-          ></path>
+        <g
+          :style="`transform: rotate(${
+            Math.random() * 360
+          }deg); transform-origin: 50% 50%;`"
+        >
+          <path :d="pathAge" fill="transparent" class="line-age"></path>
         </g>
       </svg>
+
+      <img :src="`/Path ${ Math.floor(Math.random() * (15 - 1 + 1)) + 1}.svg`"
+      :style="`
+      transform: scale(${parseInt(size)/480});
+      left: ${ Math.floor(Math.random() * (40 - 5 + 1)) + 5}%;
+      top: ${ Math.floor(Math.random() * (70 - 20 + 1)) + 20}%
+      `" v-if="confused" class="confused">
     </div>
   </div>
 </template>
@@ -47,7 +54,7 @@ export default {
     size: {
       required: false,
       type: String,
-      default: "480px"
+      default: "480px",
     },
   },
   data() {
@@ -60,6 +67,7 @@ export default {
       pathA: "",
       pathB: "",
       pathAge: "",
+      confused: false,
       fillA: "transparent",
       fillB: "transparent",
       pathCoordinates: [],
@@ -88,6 +96,16 @@ export default {
       };
 
       if (this.Person) {
+        var i = 0;
+
+        if (this.Person.Emotions[0].Type == "CONFUSED") {
+          this.confused = true;
+          i = 1;
+        } else if (this.Person.Emotions[1].Type == "CONFUSED") {
+          this.confused = true;
+          i = 0;
+        }
+
         // Primeiro
         this.radius = 100;
         this.centerX = this.centerY = 240;
@@ -95,11 +113,11 @@ export default {
         this.generateCoords();
 
         this.pathA = this.drawCurvyShape();
-        this.fillA = colors[this.Person.Emotions[0].Type];
+        this.fillA = colors[this.Person.Emotions[i].Type];
 
         // Idade
         let age = (this.Person.AgeRange.Low + this.Person.AgeRange.High) / 2;
-        this.radius = age*1.2 + 100;
+        this.radius = age * 1.2 + 100;
         this.centerX += (0.5 - Math.random()) * 40;
         this.centerY += (0.5 - Math.random()) * 40;
         this.resetPathData();
@@ -107,18 +125,21 @@ export default {
 
         this.pathAge = this.drawCurvyShape();
 
-        // Secundário
-        this.radius =
-          this.Person.Emotions[1].Confidence /
-          this.Person.Emotions[0].Confidence;
-        if (this.radius < 50) this.radius = 60;
-        this.centerX += (0.5 - Math.random()) * 100;
-        this.centerY += (0.5 - Math.random()) * 100;
-        this.resetPathData();
-        this.generateCoords();
+        if (this.confused) {
+        } else {
+          // Secundário
+          this.radius =
+            this.Person.Emotions[1].Confidence /
+            this.Person.Emotions[0].Confidence;
+          if (this.radius < 50) this.radius = 60;
+          this.centerX += (0.5 - Math.random()) * 100;
+          this.centerY += (0.5 - Math.random()) * 100;
+          this.resetPathData();
+          this.generateCoords();
 
-        this.pathB = this.drawCurvyShape();
-        this.fillB = colors[this.Person.Emotions[1].Type];
+          this.pathB = this.drawCurvyShape();
+          this.fillB = colors[this.Person.Emotions[1].Type];
+        }
       }
     },
 
@@ -262,4 +283,10 @@ path:hover {
   z-index: 1;
 }
 */
+
+.confused {
+  position: absolute;
+    filter: brightness(00);
+    transform-origin: top left;
+}
 </style>
